@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>HACLSLASH</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+<link rel="stylesheet" media="all" href="style/type/folks.css" />
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
+<![endif]-->
+<script type="text/javascript" src="style/js/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="style/js/scripts.js"></script>
+<script type="text/javascript">
+$(function() {
+			if ($('#sliderholder-cycle').length) {
+			// timeouts per slide (in seconds) 
+			var timeouts = [150,390,25]; 
+			function calculateTimeout(currElement, nextElement, opts, isForward) { 
+			    var index = opts.currSlide; 
+			    return timeouts[index] * 1000;
+			}
+			jQuery('#sliderholder-cycle').cycle({
+				fx: 'fade',
+				pager: '.slidernav',
+				prev:    '.sliderprev',
+        		next:    '.slidernext',
+				speed: 1000,
+				timeoutFn: calculateTimeout,
+				pagerEvent: 'click',
+    			pauseOnPagerHover: true,
+    			cleartype: 1
+});
+			jQuery('#sliderholder-cycle').css("display", "block");
+			jQuery('.slidernav').css("display", "block");
+			
+			}
+}); 
+</script>
+</head>
+<body>
+<div id="container"> 
+  <!-- Begin Header Wrapper -->
+  <div id="page-top">
+    <div id="header-wrapper"> 
+      <!-- Begin Header -->
+      <div id="header">
+        
+        <!-- Logo --> 
+        <!-- Begin Menu -->
+        <div id="menu-wrapper">
+          <div id="smoothmenu1" class="ddsmoothmenu">
+            <ul>
+              <li><a href="index.html" class="selected">COLLEGE MANAGEMENT SYSTEM</a>
+                
+              </li>
+              
+              
+        <!-- End Menu --> 
+      </div>
+      <!-- End Header --> 
+    </div>
+  </div>
+  <!-- End Header Wrapper --> 
+  
+  <!-- Begin Slider -->
+  <div id="cycle-wrapper">
+    <div id="sliderholder-cycle"> <img src="style/images/art/39.jpg" width="960" height="380" />
+     
+      <img src="style/images/art/home_img.jpg" width="960" height="380" /> </div>
+    <ul class="slidernav">
+    </ul>
+    <div class="sliderdir"> <a href="#"><span class="sliderprev">Prev</span></a> <a href="#"><span class="slidernext">Next</span></a> </div>
+  </div>
+  <!-- End Slider --> 
+  
+  <!-- Begin Wrapper -->
+  <div id="wrapper"> 
+    
+    <!-- Begin Intro -->
+    <div class="intro">
+      <h1><center>SIGNUP PAGE</center> </h1>
+    </div>
+    <!-- End Intro --> 
+    
+    <!-- Begin About -->
+    <div id="about">
+      
+      <center> <h3>
+        <div class="form-group">
+		
+					<label for="user">College Id:</label><br>
+					<input type="text" class="form-control input-box" name="userName" required>
+					
+				</div>
+				<br>
+				<div class="form-group">
+		
+					<label for="user">Name</label><br>
+					<input type="text" class="form-control input-box" name="userName" required>
+					
+				</div>
+				
+				<br>
+				<div class="form-group">
+					<label for="password">Password:</label><br>
+					<input type="password" class="form-control input-box" name="passWord" required>
+				</div>
+				<br> <br> 
+				
+					<input type="submit" name="submit" class="btn btn-outline btn-danger">
+			</form>
+				
+      </center>
+	  </h3>
+      
+    <!-- End About --> 
+    
+  </div>
+  
+  <!-- End Wrapper -->
+  <div class="clearfix"></div>
+  <div class="push"></div>
+</div>
+
+<!-- Begin Footer -->
+<div id="footer-wrapper">
+  <div id="footer">
+    <div id="footer-content"> 
+      
+      <!-- Begin Copyright -->
+      <div id="copyright">
+        <p>© Copyright 2017 HACLSLASH </p>
+      </div>
+      <!-- End Copyright --> 
+      
+      <!-- Begin Social Icons -->
+      <div id="socials">
+        <ul>
+          <li><a href="#"><img src="style/images/icon-rss.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-twitter.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-dribble.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-tumblr.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-flickr.png" alt="" /></a></li>
+          <li><a href="#"><img src="style/images/icon-facebook.png" alt="" /></a></li>
+        </ul>
+      </div>
+      <!-- End Social Icons --> 
+      
+    </div>
+  </div>
+</div>
+<!-- End Footer -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html> <body> <ul id="gallery" class="grid">
+        
+        <!-- Begin Image 1 -->
+        <li data-id="id-1" class="photography"> <a href="style/images/art/portfolio1.jpeg" rel="prettyPhoto[gallery]"> <img src="style/images/art/t6.jpeg" alt="" /></a> </li>
+        <!-- End Image 1 -->
+        
+        <li data-id="id-2" class="illustration"> <a href="h3.html" title=""> <img src="style/images/art/di.jpeg" alt="" /></a> </li>
+        <li data-id="id-3" class="video"> <a href="d1.html" title=""> <img src="style/images/art/h1.jpeg" alt="" /></a> </li>
+		
+        <li data-id="id-4" class="web"> <a href="h2.html" title=""> <img src="style/images/art/t1.jpeg" alt="" /></a> </li>
+		
+
+        
+      </ul>
+	  <script type="text/javascript">
+$(document).ready(function(){
+			$("#gallery a[rel^='prettyPhoto']").prettyPhoto({theme:'light_square',autoplay_slideshow: false});
+			
+			$("ul.grid img").hide()
+			$("ul.grid img").each(function(i) {
+			  $(this).delay(i * 200).fadeIn();
+			});
+			
+});
+</script>
+	  </body>
+	  </html>

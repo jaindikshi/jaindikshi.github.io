@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>Delphic | Creative Portfolio Template</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+<link rel="stylesheet" media="all" href="style/type/folks.css" />
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="style/css/ie7.css" media="all" />
+<![endif]-->
+<script type="text/javascript" src="style/js/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="style/js/scripts.js"></script>
+<script type="text/javascript">
+$(function() {
+			if ($('#sliderholder-cycle').length) {
+			// timeouts per slide (in seconds) 
+			var timeouts = [150,390,25]; 
+			function calculateTimeout(currElement, nextElement, opts, isForward) { 
+			    var index = opts.currSlide; 
+			    return timeouts[index] * 1000;
+			}
+			jQuery('#sliderholder-cycle').cycle({
+				fx: 'fade',
+				pager: '.slidernav',
+				prev:    '.sliderprev',
+        		next:    '.slidernext',
+				speed: 1000,
+				timeoutFn: calculateTimeout,
+				pagerEvent: 'click',
+    			pauseOnPagerHover: true,
+    			cleartype: 1
+});
+			jQuery('#sliderholder-cycle').css("display", "block");
+			jQuery('.slidernav').css("display", "block");
+			
+			}
+}); 
+</script>
+</head>
+<body>
+<div id="container"> 
+  <!-- Begin Header Wrapper -->
+  <div id="page-top">
+    <div id="header-wrapper"> 
+      <!-- Begin Header -->
+      
+          <div id="header">
+        
+        <!-- Logo --> 
+        <!-- Begin Menu -->
+        <div id="menu-wrapper">
+          <div id="smoothmenu1" class="ddsmoothmenu">
+            <ul>
+              <li><a href="index.html" class="selected">COLLEGE MANAGEMENT SYSTEM</a>
+                
+              </li>
+              
+              
+        <!-- End Menu --> 
+      </div>
+      <!-- End Header --> 
+    </div>
+  </div>
+        
+  <!-- End Header Wrapper --> 
+  
+  <!-- Begin Slider -->
+ 
+  <!-- End Slider -->
+  
+  <!-- Begin Wrapper -->
+  <div id="wrapper"> 
+    
+    <!-- Begin Intro -->
+    <div class="intro">
+      
+    </div>
+    <!-- End Intro --> 
+    
+    <!-- Begin About -->
+	<div class="tab-wrapper">
+      <ul id="tab-menu">
+        <li class="selected"><img src="style/images/imp.png" alt="" /> Subject A</li>
+        <li><img src="style/images/imp.png" alt="" /> Subject B</li>
+        <li><img src="style/images/imp.png" alt="" /> Subject C</li>
+        <li><img src="style/images/imp.png" alt="" /> Subject D</li>
+		 
+		  
+      </ul>
+      <div class="tab-content">
+        <div class="tab show">
+          <h3>Subject A</h3>
+          <p>Here  the important questions for Subject A can be uploaded by faculty & can be viewed</p>
+          <p> <img src="style/images/art/portfolio12-th.jpg" alt="" class="right"></p>
+        </div>
+        <div class="tab">
+          <h3>Class B</h3>
+          <p> <br><img src="style/images/art/portfolio11-th.jpg" alt="" class="left">  Here  the important questions  for Subject B can be uploaded by the faculty &  can be viewed. </p>
+        </div>
+        <div class="tab">
+          <h3>Class C</h3>
+          <p><img src="style/images/art/portfolio10-th.jpg" alt="" class="left"/> Here  the important questions for Subject C can be uploaded by faculty &  can be viewed</p>
+		  </div>
+        <div class="tab">
+          <h3>Class D</h3>
+          <p><img src="style/images/art/portfolio9-th.jpg" alt="" class="right"/> Here  the important questions for Subject D can be uploaded by faculty & can be viewed </p>
+		  </div>
+		  
+		 
+      </div>
+    <div class="clear"></div>
+    <!-- End About --> 
+    
+  </div>
+  
+  <!-- End Wrapper -->
+  <div class="clearfix"></div>
+  <div class="push"></div>
+</div>
+
+<!-- Begin Footer -->
+<div id="footer-wrapper">
+  <div id="footer">
+    <div id="footer-content"> 
+      
+      <!-- Begin Copyright -->
+     
+      <!-- End Copyright --> 
+      
+      <!-- Begin Social Icons -->
+     
+      <!-- End Social Icons --> 
+      
+    </div>
+  </div>
+</div>
+<!-- End Footer --> 
+
+<script type="text/javascript">
+
+$(document).ready(function() {	
+  //Get all the LI from the #tabMenu UL
+  $('#tab-menu > li').click(function(){
+    //remove the selected class from all LI    
+    $('#tab-menu > li').removeClass('selected');
+    //Reassign the LI
+    $(this).addClass('selected');
+    //Hide all the DIV in .tab-content
+    $('.tab-content div.tab').slideUp('slow');
+    //Look for the right DIV in boxBody according to the Navigation UL index, therefore, the arrangement is very important.
+    $('.tab-content div.tab:eq(' + $('#tab-menu > li').index(this) + ')').slideDown('slow');
+  }).mouseover(function() {
+    //Add and remove class, Personally I dont think this is the right way to do it, anyone please suggest    
+    $(this).addClass('mouseover');
+    $(this).removeClass('mouseout');   
+  }).mouseout(function() {
+    //Add and remove class
+    $(this).addClass('mouseout');
+    $(this).removeClass('mouseover');    
+  });
+});
+
+
+$(function() {
+            var offset = $("#tab-menu").offset();
+            var topPadding = 15;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > offset.top) {
+                    $("#tab-menu").stop().animate({
+                        marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });             } else {
+                    $("#tab-menu").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+        });
+  
+
+</script>
+</body>
+</html>
